@@ -47,11 +47,11 @@ public class TestUtils {
 
 }
 
-    private static boolean checkAmountOfBeforeAndAfter(Class aClass) {
+    private static boolean checkAmountOfBeforeAndAfter(Class className) {
         int before = 0;
         int after = 0;
 
-        for (Method method : aClass.getDeclaredMethods()) {
+        for (Method method : className.getDeclaredMethods()) {
             if (method.getAnnotation(BeforeSuite.class) != null) {
                 before++;
             }
